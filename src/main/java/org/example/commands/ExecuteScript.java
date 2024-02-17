@@ -1,9 +1,7 @@
 package org.example.commands;
 
 import org.example.core.Commander;
-import org.example.core.InputManager;
 
-import java.io.FileNotFoundException;
 
 public class ExecuteScript extends Command{
 

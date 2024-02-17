@@ -52,11 +52,10 @@ public class SpaceMarineCreator {
 
 
     public Long askForXCoordinate() throws InvalidInputException {
-        Long n = null;
         System.out.print("Enter X coordinate: ");
-
         try {
-            while (scanner.nextLine().isEmpty() && n == null && n < -285) {
+            Long n = scanner.nextLong();
+            while ((n == null) || n < -285) {
                 System.out.print("This value cannot be null a digit: ");
                 n = scanner.nextLong();
             }
@@ -68,10 +67,11 @@ public class SpaceMarineCreator {
     }
 
     public Double askForYCoordinate() throws InvalidInputException {
-        Double y = null;
         System.out.print("Enter Y(Double) coordinate: ");
+
         try {
-            while (scanner.nextLine().isEmpty() && y == null && y > 703) {
+            Double y = scanner.nextDouble();
+            while (y == null || y > 703) {
                 System.out.print("This value cannot be null: ");
                 y = scanner.nextDouble();
             }
