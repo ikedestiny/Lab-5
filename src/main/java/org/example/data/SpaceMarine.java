@@ -70,19 +70,14 @@ public class SpaceMarine implements  Comparable<SpaceMarine>{
         public static SpaceMarine createPracticeObject(){
                 SpaceMarine sp = new SpaceMarine(
                         "The First",
-                        new Coordinates(1,2.0),
+                        new Coordinates(1L, 2.0),
                         23,
                         true,
                         AstartesCategory.HELIX,
                         Weapon.BOLT_RIFLE,
-                        new Chapter("The first chapter","Parents")
+                        new Chapter("The first chapter", "Parents")
                 );
                 return sp;
         }
-
-
-    public void setCoordinates(Long aLong, Double aDouble) {
-            this.setCoordinates(new Coordinates(aLong,aDouble));
-    }
 
 }

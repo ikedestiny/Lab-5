@@ -4,6 +4,7 @@ import lombok.Setter;
 import org.example.core.CollectionManager;
 import org.example.core.Commander;
 import org.example.core.SpaceMarineCreator;
+import org.example.exception.IllegalValueException;
 import org.example.exception.InvalidInputException;
 
 
@@ -22,8 +23,8 @@ public class Add extends Command {
     public boolean execute() {
         System.out.println();
         try {
-            this.collectionManager.add( this.getSpaceMarineCreator().createSpaceMarine());
-        } catch (InvalidInputException e) {
+            this.collectionManager.add(this.getSpaceMarineCreator().createSpaceMarine());
+        } catch (InvalidInputException | IllegalValueException e) {
             e.getMessage();
         }
         return true;

@@ -1,8 +1,9 @@
 package org.example.core;
+import java.io.DataInputStream;
 import java.util.*;
 
 public class ConsoleManager {
-    Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(new DataInputStream(System.in));
     private final Commander commander;
 
     public ConsoleManager(Commander commander) {
@@ -11,7 +12,7 @@ public class ConsoleManager {
 
     public void Start(){
         String s1 = "";
-        System.out.println("You can enter commands, Enter help for more info...");
+        System.out.println("You can enter commands, Enter \\help\\ for more info...");
         while (!s1.equalsIgnoreCase("exit")&& scanner.hasNext()){
             s1 = scanner.next();
             boolean ex = false;

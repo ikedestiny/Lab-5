@@ -9,21 +9,27 @@ import org.example.core.XmlParser;
 import javax.xml.bind.JAXBException;
 import java.io.File;
 
-public class Save extends Command{
-    private  final CollectionManager collectionManager;
+public class Save extends Command {
+    private final CollectionManager collectionManager;
     private final XmlParser parser = new XmlParser();
     private final String fileName;
 
 
+    /**
+     * this class saves the collection to a file in xml format
+     *
+     * @param commander
+     * @param filename
+     */
     public Save(Commander commander, String filename) {
-        super("save","saves the collection to a file");
+        super("save", "saves the collection to a file");
         this.fileName = filename;
         this.collectionManager = commander.getCollectionManager();
     }
 
     @Override
     public boolean execute() {
-        parser.convertToXML(collectionManager,fileName);
-        return  true;
+        parser.convertToXML(collectionManager, fileName);
+        return true;
     }
 }

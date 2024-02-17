@@ -15,12 +15,14 @@ import org.example.data.SpaceMarine;
 
 
 import javax.xml.bind.annotation.XmlAnyElement;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementWrapper;
+
 import javax.xml.bind.annotation.XmlRootElement;
 import java.time.LocalDateTime;
 import java.util.PriorityQueue;
 
+/**
+ * this class manages the creation and interaction with space-marine objects
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

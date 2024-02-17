@@ -7,6 +7,7 @@ import org.example.core.CollectionManager;
 import org.example.core.Commander;
 import org.example.core.SpaceMarineCreator;
 import org.example.data.SpaceMarine;
+import org.example.exception.IllegalValueException;
 import org.example.exception.InvalidInputException;
 
 import java.util.Scanner;
@@ -34,6 +35,8 @@ public class UpdateById extends Command{
         try {
             spaceMarine = spaceMarineCreator.createSpaceMarine();
         } catch (InvalidInputException e) {
+            e.getMessage();
+        } catch (IllegalValueException e) {
             e.getMessage();
         }
         cm.updateById(spaceMarine,id);

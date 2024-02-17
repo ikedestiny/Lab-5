@@ -22,7 +22,7 @@ public class FilterLessThanHealth extends Command{
         System.out.println("Enter Health:");
         health = scanner.nextInt();
         this.getCollectionManager().getPriorityQueue().stream()
-                .filter(sp->sp.getHealth()>health)
+                .filter(sp -> sp.getHealth() < health)
                 .forEach(System.out::println);
 
         return  true;
