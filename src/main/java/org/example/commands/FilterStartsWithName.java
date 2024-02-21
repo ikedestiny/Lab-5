@@ -18,14 +18,11 @@ public class FilterStartsWithName extends Command{
     }
 
     @Override
-    public boolean execute() {
-        String name;
-        System.out.println("Enter substring:");
-        name = scanner.next();
+    public boolean execute(String argument) {
         this.getCollectionManager().getPriorityQueue().stream()
-                .filter(sp->sp.getName().startsWith(name))
+                .filter(sp -> sp.getName().startsWith(argument))
                 .forEach(System.out::println);
 
-        return  true;
+        return true;
     }
 }

@@ -2,6 +2,8 @@ package org.example.core;
 
 import lombok.Data;
 import org.example.commands.*;
+import org.example.exception.IllegalValueException;
+import org.example.exception.InvalidInputException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,21 +11,22 @@ import java.util.List;
 @Data
 public class Commander {
     private final List<Command> commands = new ArrayList<>();
-    private  CollectionManager collectionManager;
+    private CollectionManager collectionManager;
     private final SpaceMarineCreator spaceMarineCreator;
-    private String filePath;
+    private String xmlFIle;
     private ArrayList<String> history = new ArrayList<>();
     private InputManager inputManager;
-    public Commander(CollectionManager collectionManager, SpaceMarineCreator spaceMarineCreator, String filePath,String commandfile){
+
+    public Commander(CollectionManager collectionManager, SpaceMarineCreator spaceMarineCreator, String xmlFIle, String commandfile) {
         this.collectionManager = collectionManager;
         this.spaceMarineCreator = spaceMarineCreator;
-       this.inputManager = new InputManager(commandfile);
-       this.filePath = filePath;
+        this.inputManager = new InputManager(commandfile);
+        this.xmlFIle = xmlFIle;
         addCommands();
     }
 
 
-    public void addCommands(){
+    public void addCommands() {
         commands.add(new Add(this));
         commands.add(new Clear(this));
         commands.add(new Show(this));
@@ -32,7 +35,7 @@ public class Commander {
         commands.add(new Info(this));
         commands.add(new RemoveById(this));
         commands.add(new Exit());
-        commands.add(new Save(this,filePath ));
+        commands.add(new Save(this, xmlFIle));
         commands.add(new ExecuteScript(this));
         commands.add(new Head(this));
         commands.add(new RemoveLower(this));
@@ -44,13 +47,12 @@ public class Commander {
     }
 
 
-    public boolean doCommand(String commandName){
-        for (var com: this.getCommands()){
-            if (com.getName().trim().equalsIgnoreCase(commandName)){
-                com.execute();
+    public void doCommand(String commandName) throws IllegalValueException, InvalidInputException {
+        for (var com : this.getCommands()) {
+            if (com.getName().trim().startsWith(commandName)) {
+                com.execute(commandName.split(",")[1]);
             }
         }
-        return  true;
     }
 
 

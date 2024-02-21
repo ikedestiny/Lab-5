@@ -18,7 +18,7 @@ public class Show extends Command {
     }
 
     @Override
-    public boolean execute() {
+    public boolean execute(String argument) {
         this.collectionManager.show();
         return true;
     }

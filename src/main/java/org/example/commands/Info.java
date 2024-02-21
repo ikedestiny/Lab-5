@@ -17,15 +17,15 @@ public class Info extends Command{
     }
 
     @Override
-    public boolean execute() {
+    public boolean execute(String argument) {
         System.out.println();
         System.out.printf("""
-                Collection type    -- %s
-                Number of elements -- %d
-                Creation date      -- %s
-                """,this.getCollectionManager().getPriorityQueue().getClass().getSimpleName(),
-                    this.getCollectionManager().getPriorityQueue().size(),
-                    this.getCollectionManager().getCreationDate());
+                        Collection type    -- %s
+                        Number of elements -- %d
+                        Creation date      -- %s
+                        """, this.getCollectionManager().getPriorityQueue().getClass().getSimpleName(),
+                this.getCollectionManager().getPriorityQueue().size(),
+                this.getCollectionManager().getCreationDate());
         return true;
     }
 }

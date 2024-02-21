@@ -6,7 +6,7 @@ public class Exit extends  Command{
     }
 
     @Override
-    public boolean execute() {
+    public boolean execute(String argument) {
         System.exit(1);
         return false;
     }

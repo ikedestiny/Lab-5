@@ -17,7 +17,7 @@ public class Clear extends Command{
     }
 
     @Override
-    public boolean execute() {
+    public boolean execute(String argument) {
         System.out.println();
         collectionManager.clear();
         return true;

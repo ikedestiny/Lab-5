@@ -3,6 +3,8 @@ package org.example.commands;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import org.example.exception.IllegalValueException;
+import org.example.exception.InvalidInputException;
 
 @Data
 @Getter
@@ -16,6 +18,6 @@ public abstract class Command {
         this.description = description;
     }
 
-    public abstract boolean execute();
+    public abstract boolean execute(String argument) throws IllegalValueException, InvalidInputException;
 
 }

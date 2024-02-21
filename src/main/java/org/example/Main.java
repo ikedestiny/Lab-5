@@ -2,11 +2,9 @@ package org.example;
 
 
 import org.example.core.*;
+import org.example.exception.IllegalValueException;
 
 import javax.xml.bind.JAXBException;
-import java.io.DataInputStream;
-import java.io.InputStream;
-import java.util.Scanner;
 
 
 public class Main {
@@ -14,14 +12,21 @@ public class Main {
         XmlParser xmlParser = new XmlParser();
         CollectionManager collectionManager = null;
         try {
-            collectionManager = xmlParser.convertXmlToObject("src/main/java/org/example/data/test.xml");
+            collectionManager = xmlParser.convertXmlToObject(System.getenv("PATH_TO_XML"));
         } catch (JAXBException e) {
             e.printStackTrace();
         }
         SpaceMarineCreator spaceMarineCreator = new SpaceMarineCreator();
-        Commander commander = new Commander(collectionManager, spaceMarineCreator, "src/main/java/org/example/data/test2.xml","src/main/java/org/example/data/testfile");
+        Commander commander = new Commander(collectionManager, spaceMarineCreator, System.getenv("PATH_TO_XML"), System.getenv("PATH_TO_SCRIPT"));
         ConsoleManager cs = new ConsoleManager(commander);
-        cs.Start();
+        try {
+            cs.Start();
+        } catch (IllegalValueException e) {
+            System.out.println(e.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
 
     }
     }

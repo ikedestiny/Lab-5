@@ -13,7 +13,7 @@ public class Head extends Command{
 
 
     @Override
-    public boolean execute() {
+    public boolean execute(String argument) {
         System.out.println();
         System.out.println(collectionManager.getPriorityQueue().peek());
         return true;

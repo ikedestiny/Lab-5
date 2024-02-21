@@ -3,18 +3,33 @@
     <spaceMarine>
         <category>HELIX</category>
         <chapter>
-            <name>name</name>
+            <name>gggh</name>
             <parentLegion>parent</parentLegion>
         </chapter>
         <coordinates>
             <x>1</x>
             <y>2.0</y>
         </coordinates>
-        <creationDate>2024-02-16T23:09:38.271283200</creationDate>
+        <creationDate>2024-02-21T20:29:12.386952600</creationDate>
         <health>34</health>
-        <id>1</id>
         <loyal>true</loyal>
-        <name>name</name>
+        <name>name55</name>
+        <weaponType>BOLT_RIFLE</weaponType>
+    </spaceMarine>
+    <spaceMarine>
+        <category>HELIX</category>
+        <chapter>
+            <name>newname</name>
+            <parentLegion>parent</parentLegion>
+        </chapter>
+        <coordinates>
+            <x>1</x>
+            <y>2.0</y>
+        </coordinates>
+        <creationDate>2024-02-21T20:29:12.411955300</creationDate>
+        <health>34</health>
+        <loyal>true</loyal>
+        <name>name3</name>
         <weaponType>BOLT_RIFLE</weaponType>
     </spaceMarine>
     <spaceMarine>
@@ -27,62 +42,58 @@
             <x>1</x>
             <y>2.0</y>
         </coordinates>
-        <creationDate>2024-02-16T23:09:38.271283200</creationDate>
+        <creationDate>2024-02-21T20:29:12.412952500</creationDate>
         <health>34</health>
-        <id>2</id>
         <loyal>true</loyal>
-        <name>name</name>
+        <name>name4</name>
         <weaponType>BOLT_RIFLE</weaponType>
+    </spaceMarine>
+    <spaceMarine>
+        <category>LIBRARIAN</category>
+        <chapter>
+            <name>3</name>
+            <parentLegion>3 parent</parentLegion>
+        </chapter>
+        <coordinates>
+            <x>3</x>
+            <y>3.0</y>
+        </coordinates>
+        <creationDate>2024-02-21T20:29:12.413953</creationDate>
+        <health>3</health>
+        <loyal>true</loyal>
+        <name>3</name>
+        <weaponType>GRAV_GUN</weaponType>
     </spaceMarine>
     <spaceMarine>
         <category>HELIX</category>
         <chapter>
-            <name>name</name>
-            <parentLegion>parent</parentLegion>
+            <name>1</name>
+            <parentLegion>1 parent</parentLegion>
         </chapter>
         <coordinates>
-            <x>1</x>
-            <y>2.0</y>
+            <x>45</x>
+            <y>54.0</y>
         </coordinates>
-        <creationDate>2024-02-16T23:09:38.271283200</creationDate>
-        <health>34</health>
-        <id>3</id>
+        <creationDate>2024-02-21T20:29:12.413953</creationDate>
+        <health>67</health>
         <loyal>true</loyal>
-        <name>name</name>
+        <name>the</name>
         <weaponType>BOLT_RIFLE</weaponType>
     </spaceMarine>
     <spaceMarine>
-        <category>HELIX</category>
+        <category>INCEPTOR</category>
         <chapter>
-            <name>name</name>
-            <parentLegion>parent</parentLegion>
+            <name>sooo</name>
+            <parentLegion>sooo parent</parentLegion>
         </chapter>
         <coordinates>
-            <x>1</x>
-            <y>2.0</y>
+            <x>32</x>
+            <y>554.0</y>
         </coordinates>
-        <creationDate>2024-02-16T23:09:38.271283200</creationDate>
-        <health>34</health>
-        <id>4</id>
+        <creationDate>2024-02-21T20:29:45.164462700</creationDate>
+        <health>32</health>
         <loyal>true</loyal>
-        <name>name</name>
-        <weaponType>BOLT_RIFLE</weaponType>
-    </spaceMarine>
-    <spaceMarine>
-        <category>HELIX</category>
-        <chapter>
-            <name>name</name>
-            <parentLegion>parent</parentLegion>
-        </chapter>
-        <coordinates>
-            <x>1</x>
-            <y>2.0</y>
-        </coordinates>
-        <creationDate>2024-02-16T23:09:38.271283200</creationDate>
-        <health>34</health>
-        <id>5</id>
-        <loyal>true</loyal>
-        <name>name</name>
-        <weaponType>BOLT_RIFLE</weaponType>
+        <name>some</name>
+        <weaponType>HEAVY_BOLTGUN</weaponType>
     </spaceMarine>
 </SpaceMarines>

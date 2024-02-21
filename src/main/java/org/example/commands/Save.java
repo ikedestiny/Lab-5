@@ -3,11 +3,7 @@ package org.example.commands;
 
 import org.example.core.CollectionManager;
 import org.example.core.Commander;
-import org.example.core.JacksonParser;
 import org.example.core.XmlParser;
-
-import javax.xml.bind.JAXBException;
-import java.io.File;
 
 public class Save extends Command {
     private final CollectionManager collectionManager;
@@ -28,7 +24,7 @@ public class Save extends Command {
     }
 
     @Override
-    public boolean execute() {
+    public boolean execute(String argument) {
         parser.convertToXML(collectionManager, fileName);
         return true;
     }

@@ -11,12 +11,13 @@ public class Help extends Command{
     }
 
     @Override
-    public boolean execute() {
+    public boolean execute(String argument) {
         System.out.println();
-        commander.getCommands().forEach(s->{
-            System.out.println(s.getName()+" --> "+s.getDescription());
+        commander.getCommands().forEach(s -> {
+            System.out.println(s.getName() + " --> " + s.getDescription());
         });
         System.out.println();
+        System.out.println("ALL ARGUMENTS ARE THE LAST ITEM ENTERED AFTER THE LAST COMMA(,)");
         return true;
     }
 }

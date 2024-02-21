@@ -6,9 +6,39 @@
   <component name="ChangeListManager">
     <list default="true" id="a491ff5f-342c-4fe2-9a6f-7ca95b9cedad" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/commands/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/commands/Add.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/commands/Clear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/commands/Clear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/commands/CountGreaterThanCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/commands/CountGreaterThanCategory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/commands/ExecuteScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/commands/ExecuteScript.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/commands/Exit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/commands/Exit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/commands/FilterLessThanHealth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/commands/FilterLessThanHealth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/commands/FilterStartsWithName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/commands/FilterStartsWithName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/commands/Head.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/commands/Head.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/commands/Help.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/commands/Help.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/commands/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/commands/History.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/commands/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/commands/Info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/commands/RemoveById.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/commands/RemoveById.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/commands/RemoveLower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/commands/RemoveLower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/commands/Save.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/commands/Save.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/commands/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/commands/Show.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/commands/UpdateById.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/commands/UpdateById.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/CollectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/CollectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/Commander.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/Commander.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/ConsoleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/ConsoleManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/SpaceMarineCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/SpaceMarineCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/XmlParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/XmlParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/data/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/data/Coordinates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/data/SpaceMarine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/data/SpaceMarine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/data/file.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/data/test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/data/test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/data/test2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/data/testfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/data/script" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/IllegalKeyException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/NoSuchCommandException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/ScriptException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/SpaceMarineChecker.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,14 +108,33 @@
       <option name="project" value="LOCAL" />
       <updated>1708150279823</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="made some changes to SpaceMarineCreator.java">
+      <option name="closed" value="true" />
+      <created>1708164942505</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708164942505</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit for programming lab5" />
     <MESSAGE value="added readme file and some important changes to general dynamic" />
-    <option name="LAST_COMMIT_MESSAGE" value="added readme file and some important changes to general dynamic" />
+    <MESSAGE value="made some changes to SpaceMarineCreator.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="made some changes to SpaceMarineCreator.java" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.ConcurrentModificationException" package="java.util" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

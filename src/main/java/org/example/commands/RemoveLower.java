@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class RemoveLower extends Command{
     private final CollectionManager collectionManager;
-    private Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
 
 
     public RemoveLower(Commander commander) {
@@ -16,11 +16,13 @@ public class RemoveLower extends Command{
     }
 
     @Override
-    public boolean execute() {
-        int id;
-        System.out.print("Enter id of spaceMarine to remove lower: ");
-        id = scanner.nextInt();
-        collectionManager.getPriorityQueue().removeIf(s->s.getId()>id);
-        return true;
+    public boolean execute(String argument) {
+        try {
+            collectionManager.getPriorityQueue().removeIf(s -> s.getId() > Integer.parseInt(argument));
+            return true;
+        } catch (NumberFormatException e) {
+            System.out.println("The format of the argument is not right, collects an Integer Id");
+            return false;
+        }
     }
 }

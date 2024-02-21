@@ -4,11 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.example.data.*;
-import org.example.exception.IllegalValueException;
 import org.example.exception.InvalidInputException;
 
 import java.util.InputMismatchException;
-import java.util.Objects;
 import java.util.Scanner;
 
 @Data
@@ -19,95 +17,53 @@ public class SpaceMarineCreator {
     private Scanner scanner1 = new Scanner(System.in);
 
 
-    public SpaceMarine createSpaceMarine() throws InvalidInputException, IllegalValueException {
-        SpaceMarine spaceMarine = SpaceMarine.createPracticeObject();
-        spaceMarine.setName(askForName());
-        Long l = askForXCoordinate();
-        Double d = askForYCoordinate();
-        spaceMarine.setCoordinates(new Coordinates(l, d));
-        spaceMarine.setHealth(askForHealth());
-        spaceMarine.setLoyal(isLoyal());
-        spaceMarine.setCategory(askForAstartesCategory());
-        spaceMarine.setWeaponType(askForWeapon());
-        var ch = new Chapter(askForNameOfChapter(), askForNameOfChapterParent());
-        spaceMarine.setChapter(ch);
-        return spaceMarine;
-
-    }
-
-    public String askForName() throws InvalidInputException {
-        String name = "";
-        System.out.print("Enter Marine name: ");
+    public SpaceMarine createSpaceMarine() {
+        System.out.println();
+        Scanner scanner = new Scanner(System.in);
         try {
-            while (name.trim().isEmpty()) {
-                System.out.print("This value cannot be null: ");
+            String name;
+            System.out.print("Enter Name: ");
+            name = scanner.next();
+            while (name == null) {
+                System.out.print("Name cannot be null, Enter again: ");
                 name = scanner.nextLine();
             }
-            return name;
-        } catch (InputMismatchException e) {
-            throw new InvalidInputException();
-        }
-
-    }
-
-
-    public Long askForXCoordinate() throws InvalidInputException {
-        System.out.print("Enter X coordinate: ");
-        try {
-            Long n = scanner.nextLong();
-            while ((n == null) || n < -285) {
-                System.out.print("This value cannot be null a digit: ");
-                n = scanner.nextLong();
+            Long x;
+            Double y;
+            long health;
+            boolean loyal;
+            System.out.print("Enter x: ");
+            while (scanner.nextLine() == null) {
+                System.out.print("X cannot be null");
+                x = scanner.nextLong();
             }
-            return n;
-        } catch (InputMismatchException e) {
-            throw new InvalidInputException();
-        }
+            x = scanner.nextLong();
 
-    }
-
-    public Double askForYCoordinate() throws InvalidInputException {
-        System.out.print("Enter Y(Double) coordinate: ");
-
-        try {
-            Double y = scanner.nextDouble();
-            while (y == null || y > 703) {
-                System.out.print("This value cannot be null: ");
+            System.out.print("Enter y: ");
+            while (scanner.nextLine() == null) {
+                System.out.print("Y cannot be null");
                 y = scanner.nextDouble();
             }
-            return y;
-        } catch (InputMismatchException e) {
-            throw new InvalidInputException();
-        }
-    }
+            y = scanner.nextDouble();
 
-
-    public long askForHealth() throws InvalidInputException {
-        long health = 0;
-        System.out.print("Enter health: ");
-        try {
-            while (scanner.nextLine().isEmpty() && health < 1) {
-                System.out.println("Value of health has to be greater than one");
+            System.out.print("Enter Health: ");
+            while (scanner.nextLine() == null && scanner.nextInt() < 1) {
+                System.out.print("health cannot be null");
                 health = scanner.nextLong();
             }
-            return health;
-        } catch (InputMismatchException e) {
-            throw new InvalidInputException();
-        }
-    }
-
-    public boolean isLoyal() throws InvalidInputException {
-        try {
-            System.out.println("Enter loyal (true or false): ");
-            return scanner.nextBoolean();
-        } catch (InputMismatchException e) {
-            throw new InvalidInputException();
-        }
-    }
+            health = scanner.nextLong();
 
 
-    public AstartesCategory askForAstartesCategory() throws InvalidInputException, IllegalValueException {
-        try {
+            Coordinates coordinates = new Coordinates(x, y);
+
+
+            System.out.print("Enter loyal: ");
+            while (scanner.nextLine() == null) {
+                System.out.print("Loyal cannot be null");
+                loyal = scanner.nextBoolean();
+            }
+            loyal = scanner.nextBoolean();
+
             Integer value = null;
             System.out.println("""
                     1. ASSAULT
@@ -116,12 +72,11 @@ public class SpaceMarineCreator {
                     4. HELIX
                     5. APOTHECARY
                     """);
-            System.out.print("Enter one of the numbers: ");
-            while (scanner.nextLine().trim().isEmpty() && value == null) {
-                System.out.print("The value cannot be null, enter again: ");
+            System.out.print("Enter one of the numbers(Cannot be null): ");
+            while (value == null) {
                 value = scanner.nextInt();
             }
-            AstartesCategory as = switch (value) {
+            AstartesCategory category = switch (value) {
                 case 1 -> AstartesCategory.ASSAULT;
                 case 2 -> AstartesCategory.INCEPTOR;
                 case 3 -> AstartesCategory.LIBRARIAN;
@@ -131,53 +86,46 @@ public class SpaceMarineCreator {
 
             };
 
-            return as;
-        } catch (NullPointerException | InputMismatchException e) {
-            throw new IllegalValueException("The value you entered is not in the enum of catergory");
+
+            System.out.println("""
+                    1. HEAVY_BOLTGUN
+                    2. BOLT_RIFLE
+                    3. GRAV_GUN
+                    4. HEAVY_FLAMMER
+                    """);
+            System.out.print("Enter one of the numbers: ");
+            int valueFor = scanner.nextInt();
+            Weapon weapon = switch (valueFor) {
+                case 1 -> Weapon.HEAVY_BOLTGUN;
+                case 2 -> Weapon.BOLT_RIFLE;
+                case 3 -> Weapon.GRAV_GUN;
+                case 4 -> Weapon.HEAVY_FLAMER;
+                default -> throw new InvalidInputException();
+            };
+
+
+            System.out.print("Enter Chapter name: ");
+            String nameOfChapter = scanner.next();
+
+            String parent = nameOfChapter + " parent";
+
+            Chapter chapter = new Chapter(nameOfChapter, parent);
+
+            return new SpaceMarine(
+                    name,
+                    coordinates,
+                    health,
+                    loyal,
+                    category,
+                    weapon,
+                    chapter
+
+            );
+        } catch (InputMismatchException | InvalidInputException e) {
+            System.out.println("Invalid input. Work with the collection will be finished");
         }
+
+
+        return null;
     }
-
-    public Weapon askForWeapon() throws InvalidInputException {
-        System.out.println("""
-                1. HEAVY_BOLTGUN
-                2. BOLT_RIFLE
-                3. GRAV_GUN
-                4. HEAVY_FLAMMER
-                """);
-        System.out.print("Enter one of the numbers: ");
-        int value = scanner.nextInt();
-        Weapon as  = switch (value){
-            case 1 -> Weapon.HEAVY_BOLTGUN;
-            case 2 -> Weapon.BOLT_RIFLE;
-            case  3 -> Weapon.GRAV_GUN;
-            case 4 -> Weapon.HEAVY_FLAMER;
-            default -> throw new InvalidInputException();
-        };
-
-        return  as;
-    }
-
-    public String askForNameOfChapter() throws InvalidInputException {
-        try{
-            System.out.print("Enter chapter name: ");
-            return scanner1.nextLine();}catch (InputMismatchException e){
-            throw new InvalidInputException();
-        }
-    }
-
-    public String askForNameOfChapterParent() {
-        System.out.print("Enter parent legion: ");
-        return scanner.nextLine();
-    }
-
-    public SpaceMarine createFakeMarine() {
-        return new SpaceMarine("name", new Coordinates(1L, 2.0), 34, true, AstartesCategory.HELIX, Weapon.BOLT_RIFLE, new Chapter("name", "parent"));
-    }
-
-    public void checkForNull() throws InvalidInputException {
-        if (scanner.nextLine().isEmpty()) {
-            throw new InvalidInputException();
-        }
-    }
-
 }

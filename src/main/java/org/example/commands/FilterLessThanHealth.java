@@ -4,6 +4,7 @@ import lombok.Getter;
 import org.example.core.CollectionManager;
 import org.example.core.Commander;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 @Getter
@@ -17,14 +18,17 @@ public class FilterLessThanHealth extends Command{
     }
 
     @Override
-    public boolean execute() {
-        int health;
-        System.out.println("Enter Health:");
-        health = scanner.nextInt();
-        this.getCollectionManager().getPriorityQueue().stream()
-                .filter(sp -> sp.getHealth() < health)
-                .forEach(System.out::println);
+    public boolean execute(String argument) {
 
-        return  true;
+
+        try {
+            this.getCollectionManager().getPriorityQueue().stream()
+                    .filter(sp -> sp.getHealth() < Long.parseLong(argument))
+                    .forEach(System.out::println);
+        } catch (InputMismatchException | NumberFormatException e) {
+            System.out.println("You entered a wrong argument type for the health");
+        }
+
+        return true;
     }
 }

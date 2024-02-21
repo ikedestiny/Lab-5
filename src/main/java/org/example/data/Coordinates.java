@@ -1,7 +1,6 @@
 package org.example.data;
 
 
-
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
@@ -18,6 +17,5 @@ public class Coordinates {
     @Max(value = 703)
     @NotNull
     private Double y; //Максимальное значение поля: 703, Поле не может быть null
-
 
 }
