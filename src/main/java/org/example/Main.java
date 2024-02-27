@@ -1,12 +1,8 @@
 package org.example;
-
-
 import org.example.core.*;
 import org.example.exception.IllegalValueException;
-
 import javax.xml.bind.JAXBException;
-
-
+import java.util.NoSuchElementException;
 public class Main {
     public static void main(String[] args) {
         XmlParser xmlParser = new XmlParser();
@@ -17,7 +13,8 @@ public class Main {
             e.printStackTrace();
         }
         SpaceMarineCreator spaceMarineCreator = new SpaceMarineCreator();
-        Commander commander = new Commander(collectionManager, spaceMarineCreator, System.getenv("PATH_TO_XML"), System.getenv("PATH_TO_SCRIPT"));
+        Commander commander = new Commander(collectionManager, spaceMarineCreator, System.getenv("PATH_TO_XML"),
+                System.getenv("PATH_TO_SCRIPT"));
         ConsoleManager cs = new ConsoleManager(commander);
         try {
             cs.Start();
@@ -26,7 +23,5 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
     }

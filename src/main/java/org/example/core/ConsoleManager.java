@@ -4,6 +4,7 @@ import org.example.exception.IllegalValueException;
 import org.example.exception.InvalidInputException;
 
 import java.io.DataInputStream;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class ConsoleManager {
@@ -18,10 +19,17 @@ public class ConsoleManager {
         //checkXml();
         String s1 = "";
         System.out.println("You can enter commands, Enter \\help\\ for more info...");
-        while (!s1.equalsIgnoreCase("exit") && scanner.hasNext()) {
+        while (!s1.equalsIgnoreCase("exit") && scanner.hasNextLine()) {
             String name;
             String argument;
-            s1 = scanner.next().trim();
+            try {
+                s1 = scanner.nextLine().trim();
+            } catch (NoSuchElementException e) {
+                System.out.println("Not happening");
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+                continue;
+            }
             if (s1.trim().split(",").length > 1) {
                 name = s1.split(",")[0];
                 argument = s1.split(",")[s1.split(",").length - 1];
@@ -41,7 +49,6 @@ public class ConsoleManager {
                 System.out.println("No such command");
             }
             System.out.print("==>");
-
         }
     }
 
