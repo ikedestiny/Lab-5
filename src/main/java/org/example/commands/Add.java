@@ -43,36 +43,35 @@ public class Add extends Command {
             long health;
             boolean loyal;
             System.out.print("Enter x: ");
-            while (scanner.nextLine() == null) {
-                System.out.print("X cannot be null");
+            x = scanner.nextLong();
+            while (scanner.nextLine() == null || x < -286) {
+                System.out.print("X cannot be null or less than -286: ");
                 x = scanner.nextLong();
             }
-            x = scanner.nextLong();
 
             System.out.print("Enter y: ");
-            while (scanner.nextLine() == null) {
-                System.out.print("Y cannot be null");
+            y = scanner.nextDouble();
+            while (scanner.nextLine() == null || y > 703) {
+                System.out.print("Y cannot be null or greater than 703: ");
                 y = scanner.nextDouble();
             }
-            y = scanner.nextDouble();
 
             System.out.print("Enter Health: ");
-            while (scanner.nextLine() == null && scanner.nextInt() < 1) {
-                System.out.print("health cannot be null");
+            health = scanner.nextLong();
+            while (health < 1 || scanner.nextLine() == null) {
+                System.out.print("Health cannot be less than one or null Enter again: ");
                 health = scanner.nextLong();
             }
-            health = scanner.nextLong();
-
 
             Coordinates coordinates = new Coordinates(x, y);
 
 
             System.out.print("Enter loyal: ");
+            loyal = scanner.nextBoolean();
             while (scanner.nextLine() == null) {
                 System.out.print("Loyal cannot be null");
                 loyal = scanner.nextBoolean();
             }
-            loyal = scanner.nextBoolean();
 
             Integer value = null;
             System.out.println("""

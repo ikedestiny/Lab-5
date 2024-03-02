@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SpaceMarines>
+    <spaceMarine>
+        <category>HELIX</category>
+        <chapter>
+            <name>chapter2</name>
+            <parentLegion>chapter2 parent</parentLegion>
+        </chapter>
+        <coordinates>
+            <x>44</x>
+            <y>44.0</y>
+        </coordinates>
+        <creationDate>2024-03-01T16:49:26.084396300</creationDate>
+        <health>44</health>
+        <loyal>true</loyal>
+        <name>maciss</name>
+        <weaponType>HEAVY_FLAMER</weaponType>
+    </spaceMarine>
+    <spaceMarine>
+        <category>LIBRARIAN</category>
+        <chapter>
+            <name>chapter</name>
+            <parentLegion>chapter parent</parentLegion>
+        </chapter>
+        <coordinates>
+            <x>3</x>
+            <y>560.0</y>
+        </coordinates>
+        <creationDate>2024-03-01T16:49:26.097396100</creationDate>
+        <health>455</health>
+        <loyal>false</loyal>
+        <name>spyro</name>
+        <weaponType>HEAVY_FLAMER</weaponType>
+    </spaceMarine>
+</SpaceMarines>

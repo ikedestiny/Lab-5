@@ -5,10 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a491ff5f-342c-4fe2-9a6f-7ca95b9cedad" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/files/script" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/files/test.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/commands/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/commands/Add.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/Commander.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/Commander.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/ConsoleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/ConsoleManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/data/test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/data/test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/InputManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/InputManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/SpaceMarineCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/SpaceMarineCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/core/XmlParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/core/XmlParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/data/SpaceMarine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/data/SpaceMarine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/data/script" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/data/test.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +34,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/example/data/test.xml" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -34,24 +46,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/admin/Desktop/F/Second Semester/Programming/Lab5",
-    "onboarding.tips.debug.path": "C:/Users/admin/Desktop/F/Second Semester/Programming/untitled/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/Desktop&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/admin/Desktop/F/Second Semester/Programming/untitled/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\Desktop\" />
       <recent name="C:\Users\admin\Desktop\F\Second Semester\Programming\untitled\src\main\java\org\example\exceptions" />
       <recent name="C:\Users\admin\Desktop\F\Second Semester\Programming\untitled\src\main\java\org\example" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\Desktop\F\Second Semester\Programming\Lab5\src" />
+      <recent name="C:\Users\admin\Desktop\F\Second Semester\Programming\Lab5\files" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -87,14 +104,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708164942505</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="no changes just some organisation">
+      <option name="closed" value="true" />
+      <created>1709043416974</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709043416974</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit for programming lab5" />
     <MESSAGE value="added readme file and some important changes to general dynamic" />
     <MESSAGE value="made some changes to SpaceMarineCreator.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="made some changes to SpaceMarineCreator.java" />
+    <MESSAGE value="no changes just some organisation" />
+    <option name="LAST_COMMIT_MESSAGE" value="no changes just some organisation" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

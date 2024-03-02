@@ -8,6 +8,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import java.time.LocalDateTime;
+import java.util.Comparator;
 
 @Data
 @XmlRootElement
@@ -44,7 +45,14 @@ public class SpaceMarine implements Comparable<SpaceMarine> {
 
         @Override
         public int compareTo(SpaceMarine o) {
-                return this.id - o.id;
+            if (this.getName().compareTo(o.getName()) != 0) {
+                return this.getName().compareTo(o.getName());
+            } else if (this.getHealth() - o.getHealth() != 0) {
+                return (int) (this.getHealth() - o.getHealth());
+            } else if (this.getWeaponType().ordinal() - o.getWeaponType().ordinal() != 0) {
+                return this.getWeaponType().ordinal() - o.getWeaponType().ordinal();
+            }
+            return this.id - o.id;
         }
 
         public static SpaceMarine createPracticeObject(){

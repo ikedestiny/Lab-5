@@ -8,6 +8,9 @@ import org.example.exception.InvalidInputException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * controls all the commands that are entered in the console
+ */
 @Data
 public class Commander {
     private final List<Command> commands = new ArrayList<>();
@@ -25,7 +28,9 @@ public class Commander {
         addCommands();
     }
 
-
+    /**
+     * adds a command to the collection of commands that the commander controls
+     */
     public void addCommands() {
         commands.add(new Add(this));
         commands.add(new Clear(this));
@@ -54,12 +59,6 @@ public class Commander {
             }
         }
     }
-
-
-
-
-
-
 
 
 }

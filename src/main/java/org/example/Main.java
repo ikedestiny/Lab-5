@@ -1,7 +1,10 @@
 package org.example;
 import org.example.core.*;
 import org.example.exception.IllegalValueException;
+import org.example.exception.InvalidInputException;
+
 import javax.xml.bind.JAXBException;
+import java.io.EOFException;
 import java.util.NoSuchElementException;
 public class Main {
     public static void main(String[] args) {
@@ -20,8 +23,11 @@ public class Main {
             cs.Start();
         } catch (IllegalValueException e) {
             System.out.println(e.getMessage());
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (NoSuchElementException e) {
+            System.out.println("Not a valid input");
+
+        } catch (InvalidInputException e) {
+            System.out.println(e.getMessage());
         }
     }
     }

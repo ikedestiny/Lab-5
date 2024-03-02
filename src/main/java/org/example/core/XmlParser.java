@@ -6,27 +6,26 @@ import org.example.data.SpaceMarine;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.PriorityQueue;
 
 @Data
 public class XmlParser {
-   private JAXBContext jaxbContext;
+    private JAXBContext jaxbContext;
 
 
+    /**
+     * class for serialization and deserializarion of spacemarine objects and collections
+     */
     public XmlParser() {
     }
 
     /**
-     *
      * @param path
      * @return object of collection manager
      * @throws JAXBException
      */
-   public CollectionManager convertXmlToObject(String path) throws JAXBException {
+    public CollectionManager convertXmlToObject(String path) throws JAXBException {
 
        File file = new File(path);
        jaxbContext = JAXBContext.newInstance(CollectionManager.class);
@@ -45,9 +44,16 @@ public class XmlParser {
             Marshaller marshaller = context.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             marshaller.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
-            BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream(fileName));
-            marshaller.marshal(collectionManager, bufferedOutputStream);
-            bufferedOutputStream.close();
+
+            try {
+                BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream(fileName));
+
+
+                marshaller.marshal(collectionManager, bufferedOutputStream);
+                bufferedOutputStream.close();
+            } catch (FileNotFoundException e) {
+                System.out.println("The file was not found or access rights are missing. Not saved");
+            }
         } catch (JAXBException | IOException e) {
             e.printStackTrace();
             System.out.println("something went wrong while converting to xml");

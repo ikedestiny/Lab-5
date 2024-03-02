@@ -9,6 +9,9 @@ import org.example.exception.InvalidInputException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * class is used to collect inputs and creates a space marine object
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,7 +19,9 @@ public class SpaceMarineCreator {
     private Scanner scanner = new Scanner(System.in);
     private Scanner scanner1 = new Scanner(System.in);
 
-
+    /**
+     * @return spacemarine
+     */
     public SpaceMarine createSpaceMarine() {
         System.out.println();
         Scanner scanner = new Scanner(System.in);
@@ -33,25 +38,25 @@ public class SpaceMarineCreator {
             long health;
             boolean loyal;
             System.out.print("Enter x: ");
-            while (scanner.nextLine() == null) {
+            x = scanner.nextLong();
+            while (scanner.nextLine() == null || x < -286) {
                 System.out.print("X cannot be null");
                 x = scanner.nextLong();
             }
-            x = scanner.nextLong();
 
             System.out.print("Enter y: ");
-            while (scanner.nextLine() == null) {
+            y = scanner.nextDouble();
+            while (scanner.nextLine() == null || y > 703) {
                 System.out.print("Y cannot be null");
                 y = scanner.nextDouble();
             }
-            y = scanner.nextDouble();
 
             System.out.print("Enter Health: ");
-            while (scanner.nextLine() == null && scanner.nextInt() < 1) {
+            health = scanner.nextLong();
+            while (scanner.nextLine() == null || health < 1) {
                 System.out.print("health cannot be null");
                 health = scanner.nextLong();
             }
-            health = scanner.nextLong();
 
 
             Coordinates coordinates = new Coordinates(x, y);
